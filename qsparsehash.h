@@ -6,6 +6,7 @@
 #include <qglobal.h>
 #include <QHash>
 #include <QDataStream>
+#include <QDebug>
 
 /*
  * QHash-like wrapper for google::sparse_hash_map and google::dense_hash_map
@@ -71,7 +72,7 @@ public:
     void print() const {
         typename Container::const_iterator i = this->begin();
         while (i != this->end()) {
-            printf("key: %s value: %d\n", qPrintable(i->first), i->second);
+            qDebug() << "key: " << i->first << " value: " << i->second;
             i++;
         }
     }
