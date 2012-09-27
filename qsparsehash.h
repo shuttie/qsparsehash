@@ -51,9 +51,6 @@ template <class Container, class Key, class T>
 class QGoogleHash: public Container
 {
 public:
-    QGoogleHash() {
-        this->set_deleted_key(Key());
-    }
     void insert(const Key &key, const T &value) {
         (*this)[key] = value;
     }
