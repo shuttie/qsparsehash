@@ -90,7 +90,12 @@ template <class Key, class T>
 class QSparseHash: public QGoogleHash<google::sparse_hash_map<Key, T>, Key, T> {};
 
 template <class Key, class T>
-class QDenseHash: public QGoogleHash<google::dense_hash_map<Key, T>, Key, T> {};
+class QDenseHash: public QGoogleHash<google::dense_hash_map<Key, T>, Key, T> {
+public:
+    QDenseHash(const Key& empty_key = Key()) {
+        this->set_empty_key(empty_key);
+    }
+};
 
 /* Serialization and deserialization routines
  */
