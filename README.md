@@ -53,7 +53,8 @@ Does hash contain a key?
         
 Dense hash example:
 
-    QDenseHash<QString, int> hash(""); // going to use "" as empty_key
+    QDenseHash<QString, int> hash; 
+    hash.set_empty_key(""); // going to use "" as empty_key
     hash.set_deleted_key("!"); // empty_key must not match deleted_key
     hash.insert("foo", 1);
     hash.insert("bar", 2);
