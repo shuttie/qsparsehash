@@ -57,7 +57,7 @@ public:
     void insert(const Key &key, const T &value) {
         (*this)[key] = value;
     }
-    T value(const Key &key) {
+    T value(const Key &key) const {
         typename Container::const_iterator i;
         i = this->find(key);
         if (i != this->end())
@@ -79,7 +79,10 @@ public:
         }
     }
     void remove(const Key &key) {
-        this->remove(key);
+        this->erase(key);
+    }
+    void squeeze() {
+        // there's nothing to squeeze
     }
 };
 
