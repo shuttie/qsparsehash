@@ -5,11 +5,11 @@ A small Qt wrapper for [Google sparse_hash_map](https://code.google.com/p/sparse
 
 **Installation**
 
-The wrapper itself is a single c++ header file (qsparsehash.h). Just include it to your project.
+The wrapper itself is a single C++ header file (qsparsehash.h). Just include it to your project.
 
 **Compatibility**
 
-QSparseHash is tested with Qt 4.8 and sparsehash 2.0.2. It may work with older versions, but I've not tested it.
+QSparseHash is tested with Qt 4.8 and sparsehash 1.10/2.0.2. It may work with older versions, but I've not tested it.
 
 **How to use**
 
@@ -26,6 +26,7 @@ Creating, inserting and removing values:
     // accessing values
     printf("baz: %d\n", hash["baz"]);
     // removing
+    hash.set_deleted_key(""); // if you remove items from hash, you must set deleted_key
     hash.remove("foo");
     printf("count: %d\n", hash.count());
     
@@ -49,6 +50,14 @@ Does hash contain a key?
         printf("hash contains baz\n");
     if (hash.contains("foo"))
         printf("hash contains foo\n);
+        
+Dense hash example:
+
+    QDenseHash<QString, int> hash;
+    hash.set_empty_key(""); // google::dense_hash_map requirement
+    hash.insert("foo", 1);
+    hash.insert("bar", 2);
+    printf("foo: %d\n", hash["foo"]);
         
 **More documentation**
 
