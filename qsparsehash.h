@@ -1,8 +1,8 @@
 #ifndef QSPARSEHASH_H
 #define QSPARSEHASH_H
 
-#include <sparsehash/sparse_hash_map>
-#include <sparsehash/dense_hash_map>
+#include <google/sparse_hash_map>
+#include <google/dense_hash_map>
 #include <qglobal.h>
 #include <QHash>
 #include <QDataStream>
