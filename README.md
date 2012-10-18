@@ -67,3 +67,5 @@ You may also be interested in these external docs:
 * [Google sparsehash](http://sparsehash.googlecode.com/svn/trunk/doc/index.html);
 * [Qt's QHash](http://qt-project.org/doc/qt-4.8/qhash.html);
 * QHash, sparsehash, boost:unordered_map, std::unordered_map, ruby & python maps [benchmark](http://blog.aggregateknowledge.com/2011/11/27/big-memory-part-3-5-google-sparsehash/).
+
+[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/cc1d27670ad5e06db4bf70ce51adc384 "githalytics.com")](http://githalytics.com/shuttie/qsparsehash)
